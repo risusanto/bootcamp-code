@@ -1,0 +1,23 @@
+{
+  "name": "chapter-4-2-nodejs",
+  "version": "1.0.0",
+  "description": "chapter 4 topic 2 bootcamp Binar",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "keywords": [
+    "code",
+    "bootcamp"
+  ],
+  "author": "Ari Susanto",
+  "license": "ISC",
+  "dependencies": {
+    "colors": "^1.4.0",
+    "cowsay": "^1.5.0",
+    "format-number": "^3.0.0",
+    "lodash": "^4.17.21",
+    "xor-crypt": "^1.1.1"
+  }
+}
