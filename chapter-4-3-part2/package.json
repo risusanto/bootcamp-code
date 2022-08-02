@@ -1,0 +1,16 @@
+{
+  "name": "chapter-4-3-part2",
+  "version": "1.0.0",
+  "description": "Belajar express part 2",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "keywords": [],
+  "author": "Binar Bootcamp",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.1"
+  }
+}
