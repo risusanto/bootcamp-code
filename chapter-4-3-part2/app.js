@@ -18,6 +18,10 @@ function logger(req, res, next) {
 // application level middleware
 app.use(logger)
 
+// built-in express middleware
+app.use(express.json())
+app.use(express.urlencoded({extended: true}))
+
 // use external router
 app.use('/user', user_router)
 

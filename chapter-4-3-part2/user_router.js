@@ -22,4 +22,20 @@ user_router.get('/', function (req, res) {
     })
 })
 
+user_router.post('/alamat/add', function (req, res) {
+    let body = req.body
+
+    let res_data = {
+        "username": req.headers['username'],
+        "address": body
+    }
+    res.json(res_data)
+})
+
+user_router.post('/saldo/add', function (req, res) {
+    let body = req.body
+    res.json(body)
+})
+
+
 module.exports = user_router
