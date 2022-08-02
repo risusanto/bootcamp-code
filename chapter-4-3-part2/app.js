@@ -1,4 +1,5 @@
 const express = require('express')
+const morgan = require('morgan')
 
 // routers
 const user_router = require('./user_router')
@@ -10,13 +11,8 @@ const port = 8080
 // init express App
 const app = express()
 
-function logger(req, res, next) {
-    console.log(`${req.method} ${req.url}`)
-    next()
-}
-
 // application level middleware
-app.use(logger)
+app.use(morgan('combined'))
 
 // built-in express middleware
 app.use(express.json())
@@ -41,6 +37,25 @@ app.get('/date', function (req, res) {
         "timestamp": date.getTime()
     })
 })
+
+app.get('/error', function (req, res) {
+    inn
+    res.json({
+        msg: "ok"
+    })
+})
+
+function errorHandler (err, req, res, next) {
+    if (res.headersSent) {
+        return next(err)
+    }
+    res.status(500)
+    res.json({
+        msg: err.message
+    })
+}
+
+app.use(errorHandler)
 
 
 
