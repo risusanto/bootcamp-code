@@ -38,5 +38,14 @@ VALUES ('Test gagal', '2000/01/01', 'Lorem ipsum dolor sit amet, consectetur adi
 
 -- 10. Update data
 UPDATE employee
-    SET nama = 'Sabrina'
-WHERE id = 1;
+    SET jabatan = null
+WHERE id = 3;
+
+-- 11. Delete Data
+DELETE FROM employee WHERE id = 4;
+
+-- 12. Drop table column
+ALTER TABLE employee DROP COLUMN jabatan;
+
+-- 13. Add Jabatan colum (Again)
+ALTER TABLE employee ADD COLUMN jabatan VARCHAR(20);
