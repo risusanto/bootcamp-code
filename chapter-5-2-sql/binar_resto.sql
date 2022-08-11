@@ -1,3 +1,5 @@
+-- created by ari susanto
+
 -- ignore kalau sudah create database
 create database binar_resto_db;
 
