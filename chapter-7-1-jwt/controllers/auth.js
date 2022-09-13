@@ -1,7 +1,7 @@
 const jwt = require('jsonwebtoken')
 const bcrypt = require('bcrypt')
 const {User} = require('../models')
-const e = require("express");
+const googleOAuth = require('../lib/google-auth')
 
 async function get_user_by_email(email) {
     let user = null
@@ -104,8 +104,44 @@ async function profile(req, res) {
     })
 }
 
+function login_with_google_page(req, res) {
+    res.render('google-login', {app_id: process.env.GOOGLE_APP_ID})
+}
+
+async function login_with_google(req, res) {
+    let id_token = req.body['id_token']
+    let data = null
+    let res_data = {
+        status: 'failed',
+        message: 'incorrect email or password',
+        data: null
+    }
+
+    try{
+        data = await googleOAuth(id_token)
+    } catch (e) {
+        res_data.message = e.message
+        return res.status(500).json(res_data)
+    }
+
+    // get user by email
+    let user = await get_user_by_email(data.email)
+    if(user == null) {
+        // TODO: register user if not exist
+        return res.status(400).json(res_data)
+    }
+
+    res_data.status = 'ok'
+    res_data.message = 'success'
+    res_data.data = generate_access_token(user)
+
+    res.json(res_data)
+}
+
 module.exports = {
     register,
     login,
-    profile
+    profile,
+    login_with_google_page,
+    login_with_google
 }
