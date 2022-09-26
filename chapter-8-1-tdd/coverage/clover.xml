@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1664199922588" clover="3.2.0">
-  <project timestamp="1664199922588" name="All files">
-    <metrics statements="14" coveredstatements="14" conditionals="2" coveredconditionals="2" methods="2" coveredmethods="2" elements="18" coveredelements="18" complexity="0" loc="14" ncloc="14" packages="1" files="1" classes="1"/>
+<coverage generated="1664200626985" clover="3.2.0">
+  <project timestamp="1664200626985" name="All files">
+    <metrics statements="28" coveredstatements="28" conditionals="9" coveredconditionals="9" methods="2" coveredmethods="2" elements="39" coveredelements="39" complexity="0" loc="28" ncloc="28" packages="1" files="1" classes="1"/>
     <file name="baseController.js" path="D:\Projects\Binar Academy\bootcamp-code-full\chapter-8-1-tdd\controllers\baseController.js">
-      <metrics statements="14" coveredstatements="14" conditionals="2" coveredconditionals="2" methods="2" coveredmethods="2"/>
+      <metrics statements="28" coveredstatements="28" conditionals="9" coveredconditionals="9" methods="2" coveredmethods="2"/>
       <line num="1" count="1" type="stmt"/>
       <line num="2" count="1" type="cond" truecount="1" falsecount="0"/>
       <line num="3" count="1" type="stmt"/>
@@ -11,13 +11,27 @@
       <line num="5" count="1" type="stmt"/>
       <line num="6" count="1" type="stmt"/>
       <line num="7" count="1" type="cond" truecount="1" falsecount="0"/>
-      <line num="8" count="2" type="stmt"/>
-      <line num="9" count="2" type="stmt"/>
-      <line num="10" count="2" type="stmt"/>
-      <line num="11" count="2" type="stmt"/>
-      <line num="12" count="2" type="stmt"/>
-      <line num="13" count="2" type="stmt"/>
+      <line num="8" count="4" type="stmt"/>
+      <line num="9" count="4" type="stmt"/>
+      <line num="10" count="4" type="stmt"/>
+      <line num="11" count="4" type="stmt"/>
+      <line num="12" count="4" type="cond" truecount="2" falsecount="0"/>
+      <line num="13" count="1" type="stmt"/>
       <line num="14" count="1" type="stmt"/>
+      <line num="15" count="1" type="stmt"/>
+      <line num="16" count="1" type="stmt"/>
+      <line num="17" count="3" type="cond" truecount="1" falsecount="0"/>
+      <line num="18" count="4" type="cond" truecount="3" falsecount="0"/>
+      <line num="19" count="2" type="stmt"/>
+      <line num="20" count="2" type="stmt"/>
+      <line num="21" count="2" type="stmt"/>
+      <line num="22" count="2" type="stmt"/>
+      <line num="23" count="3" type="cond" truecount="1" falsecount="0"/>
+      <line num="24" count="3" type="stmt"/>
+      <line num="25" count="3" type="stmt"/>
+      <line num="26" count="3" type="stmt"/>
+      <line num="27" count="3" type="stmt"/>
+      <line num="28" count="1" type="stmt"/>
     </file>
   </project>
 </coverage>

@@ -52,4 +52,22 @@ describe('Base Controller test', () => {
             message: 7
         })
     })
+
+    test('test tambah string', () => {
+        const req = mockRequest({x: '3', y: '4'})
+        const res = mockResponse()
+
+        baseController.sum(req, res)
+        expect(res.json).toBeCalledWith({
+            message: '34'
+        })
+    })
+
+    test('invalid parameter', () => {
+        const req = mockRequest({x: undefined, y: '4'})
+        const res = mockResponse()
+
+        baseController.sum(req, res)
+        expect(res.status).toBeCalledWith(400)
+    })
 })
